@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>BMI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+<div class="card">
+
+<h1>BMI Calculator</h1>
+
+<form action="/bmi_result" method="POST">
+
+<input type="text"
+name="name"
+placeholder="Enter Name"
+required>
+
+<input type="number"
+name="height"
+placeholder="Height in CM"
+required>
+
+<input type="number"
+name="weight"
+placeholder="Weight in KG"
+required>
+
+<button type="submit">
+Calculate BMI
+</button>
+
+</form>
+
+</div>
+
+</div>
+<a href="/">
+    <button>
+        ← Back
+    </button>
+</a>
+</body>
+</html>

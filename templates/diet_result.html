@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Diet Plan</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+<div class="card">
+
+<h1>{{ goal }} Diet Plan</h1>
+
+<h2 style="text-align:center;">
+Body Type : {{ body }}
+</h2>
+
+<div class="grid">
+
+{% for time, food in diet.items() %}
+
+<div class="box">
+
+<h2>{{ time }}</h2>
+
+<p>{{ food }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+<a href="/bmi">
+    <button>
+        ← Back
+    </button>
+</a>
+</body>
+</html>

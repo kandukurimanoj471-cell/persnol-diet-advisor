@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Body Type</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+<div class="card">
+
+<h1>Select Body Type</h1>
+
+<form action="/diet_result" method="POST">
+
+<input type="hidden"
+name="goal"
+value="{{ goal }}">
+
+<select name="body" required>
+
+<option value="">
+Choose Body Type
+</option>
+
+<option value="Ectomorph">
+Ectomorph
+</option>
+
+<option value="Mesomorph">
+Mesomorph
+</option>
+
+<option value="Endomorph">
+Endomorph
+</option>
+
+</select>
+
+<button type="submit">
+Generate Diet
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

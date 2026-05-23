@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="hero">
+
+    <div class="result-card">
+        <h1>Your BMI Result</h1>
+
+        <p><strong>BMI:</strong> {{ bmi }}</p>
+        <p><strong>Status:</strong> {{ status }}</p>
+        <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+
+        <a href="/diet">
+            <button>View Diet Plan</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

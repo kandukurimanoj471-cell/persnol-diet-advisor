@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Smart Diet</div>
+
+    <div class="nav-links">
+        <a href="/bmi">BMI</a>
+        <a href="/body_type">Body Type</a>
+        <a href="/diet">Diet Plan</a>
+    </div>
+</div>
+
+<div class="dashboard">
+    <h1>Welcome {{ username }}</h1>
+    <h2>Your Smart Fitness & Diet Partner</h2>
+
+    <div class="grid">
+
+        <div class="feature-card">
+            <a href="/bmi">
+                <h2>BMI Calculator</h2>
+                <p>Calculate your BMI accurately.</p>
+            </a>
+        </div>
+
+        <div class="feature-card">
+            <a href="/body_type">
+                <h2>Body Types</h2>
+                <p>Know your body type.</p>
+            </a>
+        </div>
+
+        <div class="feature-card">
+            <a href="/diet">
+                <h2>Diet Recommendation</h2>
+                <p>Foods for weight gain and weight loss.</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    Smart Diet System © 2026
+</div>
+<a href="/bmi">
+    <button>
+        ← Back
+    </button>
+</a>
+</body>
+</html>
